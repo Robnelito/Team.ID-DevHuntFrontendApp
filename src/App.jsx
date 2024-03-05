@@ -99,14 +99,15 @@ function App() {
             </div>
           </div>
         }
-
+        {/*TODO button color depend on element*/}
+        {/*TODO return button*/}
         <div
-          className={` ${goSomewhere ? "bg-black bg-opacity-50" : "opacity-0 z-0"} absolute text-white z-10 flex flex-col justify-center place-items-center transition-all duration-1000 *:rounded-md gap-2 text-5xl`}>
-          {element}
+          className={` ${goSomewhere ? "bg-black bg-opacity-50 z-10" : "opacity-0 z-0"} absolute text-white flex flex-col justify-center place-items-center transition-all duration-1000 *:rounded-md gap-2 text-5xl`}>
+          {element} <span className={`text-lg font-bold ${element === 'Air' ? "bg-green-900" : element === 'Earth' ? "bg-amber-950" : "bg-black"} p-2 bg-opacity-50 cursor-pointer mt-4`}>Entrer</span> <span className={"text-lg font-bold bg-black p-2 bg-opacity-50 cursor-pointer"}>Sortir</span>
         </div>
 
         <Canvas>
-          {/* <color attach='background' args={['lightblue']} /> */}
+        {/* <color attach='background' args={['lightblue']} /> */}
           {/*<OrbitControls/>*/}
           <ambientLight intensity={2}/>
           {/* <ScrollControls pages={2} damping={0.25}> */}
